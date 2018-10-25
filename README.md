@@ -19,7 +19,8 @@ kubectl delete namespace monitoring
 
 If you want to re-import the default dashboards from this setup run this job:
 ```bash
-kubectl apply --filename ./manifests/grafana/grafana-import-dashboards-job.yaml
+kubectl apply \
+  --filename https://raw.githubusercontent.com/giantswarm/kubernetes-prometheus/master/manifests/grafana/import-dashboards/job.yaml
 ```
 
 In case the job already exists from an earlier run, delete it before:
